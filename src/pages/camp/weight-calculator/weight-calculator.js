@@ -12,6 +12,7 @@ const WeightCalculator = observer(({ store })=> {
 
   const onSubmit = (data) => {
     // add to store
+    store.addToGearList(data);
   }
 
   return (
@@ -24,6 +25,12 @@ const WeightCalculator = observer(({ store })=> {
       </form>
 
       Weight Calculator
+
+      {
+        store.gearsList?.map((data) => {
+          return <div> title: {data.name} // weight: {data.weight} </div>
+        })
+      }
     </div>
   )
 });
