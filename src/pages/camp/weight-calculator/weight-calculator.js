@@ -85,23 +85,23 @@ const WeightCalculator = observer(({ store })=> {
         <form onSubmit={handleSubmit(onSubmit)}>
           <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', padding: 4 }}>
             <div>
-              <label for="typeFormControl" class="form-label bold-label">類型</label>
-              <select class="form-select" aria-label="Gear type select" {...register('type')}>
-                <option selected value='none'>請選擇類型</option>
+              <label className="form-label bold-label">類型</label>
+              <select className="form-select" aria-label="Gear type select" {...register('type')} defaultValue='none'>
+                <option value='none'>請選擇類型</option>
                 { createTypeOptions() }
               </select>
             </div>
             <div>
-              <label for="nameFormControlInput" class="form-label bold-label">名稱</label>
-              <input class="form-control" id="nameFormControlInput" placeholder="名稱" {...register('name')} />
+              <label className="form-label bold-label">名稱</label>
+              <input className="form-control" id="nameFormControlInput" placeholder="名稱" {...register('name')} />
             </div>
             <div>
-              <label for="weightFormControlInput" class="form-label bold-label">重量 (克)</label>
-              <input class="form-control" id="weightFormControlInput" type="number" placeholder="重量 (克)" {...register('weight')} />
+              <label className="form-label bold-label">重量 (克)</label>
+              <input className="form-control" id="weightFormControlInput" type="number" placeholder="重量 (克)" {...register('weight')} />
             </div>
             <div>
-              <label for="weightFormControlInput" class="form-label bold-label">數量</label>
-              <input class="form-control" id="weightFormControlInput" type="number" placeholder="數量" defaultValue="1" {...register('qty')} />
+              <label className="form-label bold-label">數量</label>
+              <input className="form-control" id="weightFormControlInput" type="number" placeholder="數量" defaultValue="1" {...register('qty')} />
             </div>
 
             <button type='submit' className="btn btn-success submit-btn">提交</button>
@@ -113,13 +113,13 @@ const WeightCalculator = observer(({ store })=> {
 
       <Grid container>
         <Grid item xs={12} md={6}>
-          <Box sx={{ p: 3, height: 'calc(100vh - 180px)', overflow: 'auto'}}>
+          <Box sx={{ p: 3, height: 'calc(100vh - 165px)', overflow: 'auto'}}>
             { generateTable() }
           </Box>
         </Grid>
 
         <Grid item xs={12} md={6}>
-          <Box sx={{ p: 3, height: 'calc(100vh - 180px)', overflow: 'auto' }}>
+          <Box sx={{ p: 3, height: 'calc(100vh - 165px)', overflow: 'auto' }}>
             <CategoryContainer title={`⚖️總重量`}>
               { generateSelectedGear() }
             </CategoryContainer>

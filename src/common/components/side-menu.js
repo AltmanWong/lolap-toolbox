@@ -17,12 +17,12 @@ const MENU = [
       {
         title: "重量計算機",
         path: "/camp/weight-calculator",
-        icon: <i class="fas fa-weight"></i>
+        icon: <i className="fas fa-weight"></i>
       },
       {
         title: "食咩好",
         path: "/camp/eat",
-        icon: <i class="fas fa-utensils"></i>
+        icon: <i className="fas fa-utensils"></i>
 
       }
     ]
@@ -33,7 +33,7 @@ const MENU = [
       {
         title: "拆數機",
         path: "/daily/pay-calculator",
-        icon: <i class="fas fa-calculator"></i>
+        icon: <i className="fas fa-calculator"></i>
 
       }
     ]
@@ -50,11 +50,11 @@ const SideMenu = (props) => {
         {
           MENU.map((cat) => {
             return (
-              <div>
+              <div key={cat.category}>
                 <h6 style={{ marginLeft: '1rem', marginTop: '0.3rem', fontWeight: 'bold' }}>{cat.category}</h6>
                 {
                   cat.subMenu.map((subMenu) => {
-                    return <MenuButton { ...subMenu } />
+                    return <MenuButton key={subMenu.title} { ...subMenu } />
                   })
                 }
               </div>
