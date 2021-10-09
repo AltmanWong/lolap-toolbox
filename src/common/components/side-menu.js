@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 // MUI
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import { Divider, Toolbar } from '@mui/material';
 
@@ -45,7 +44,7 @@ const SideMenu = (props) => {
           MENU.map((cat) => {
             return (
               <div>
-                <h4>{cat.category}</h4>
+                <h6 style={{ marginLeft: '0.3rem', marginTop: '0.3rem', fontWeight: 'bold' }}>{cat.category}</h6>
                 {
                   cat.subMenu.map((subMenu) => {
                     return <MenuButton { ...subMenu } />
