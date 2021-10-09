@@ -10,7 +10,7 @@ const TYPE = {
 }
 
 const TO_EXPORT = {
-  TYPE: TYPE;
+  TYPE: TYPE
 }
 
 export default TO_EXPORT;
