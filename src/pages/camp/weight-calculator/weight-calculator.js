@@ -15,10 +15,6 @@ import GearCard from './gear-crad';
 const WeightCalculator = observer(({ store })=> {
   const { register, handleSubmit, reset } = useForm();
 
-  useEffect(() => {
-    console.log(store); 
-  }, [])
-
   const onSubmit = (data) => {
     console.log(data);
 
@@ -53,7 +49,7 @@ const WeightCalculator = observer(({ store })=> {
     let weight = 0;
 
     store.selectedGears.forEach(data => {
-      render.push(<NameWeightPair data={data} />);
+      render.push(<NameWeightPair key={data.name} data={data} />);
       weight += parseFloat(data.weight * data.qty);
     })
 

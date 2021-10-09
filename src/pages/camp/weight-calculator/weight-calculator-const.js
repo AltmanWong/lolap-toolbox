@@ -9,6 +9,8 @@ const TYPE = {
   'others': '🧰其他',
 }
 
-export default {
-  TYPE: TYPE
+const TO_EXPORT = {
+  TYPE: TYPE;
 }
+
+export default TO_EXPORT;

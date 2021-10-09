@@ -7,9 +7,8 @@ import { Link } from 'react-router-dom';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
-import { Divider, Toolbar, Box, ListItemIcon } from '@mui/material';
+import { Toolbar, Box, ListItemIcon } from '@mui/material';
 
-import GavelIcon from '@mui/icons-material/Gavel';
 
 const MENU = [
   {
