@@ -37,7 +37,7 @@ const WeightCalculator = observer(({ store })=> {
 
     for (var key in CONSTANT.TYPE) {
       render.push(
-        <CategoryContainer title={CONSTANT.TYPE[key]}>
+        <CategoryContainer key={key} title={CONSTANT.TYPE[key]}>
           {
             store.gearsList.filter(x => x.type === key).map(x => <GearCard store={store} data={x} />)
           }
