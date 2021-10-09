@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 import { observer } from 'mobx-react-lite';
 import { useForm } from 'react-hook-form';
@@ -34,14 +34,18 @@ const WeightCalculator = observer(({ store })=> {
     for (var key in CONSTANT.TYPE) {
       render.push(
         <CategoryContainer key={key} title={CONSTANT.TYPE[key]}>
-          {
-            store.gearsList.filter(x => x.type === key).map(x => <GearCard store={store} data={x} />)
-          }
+          { generateGearCard(key) }
         </CategoryContainer>
       );
     }
 
     return render;
+  }
+
+  const generateGearCard = (key) => {
+    let filterdList = store.gearsList.filter(x => x.type === key);
+
+    return filterdList.map(data => <GearCard key={data.name} store={store} data={data} />)
   }
 
   const generateSelectedGear = () => {
