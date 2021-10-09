@@ -113,13 +113,13 @@ const WeightCalculator = observer(({ store })=> {
 
       <Grid container>
         <Grid item xs={12} md={6}>
-          <Box sx={{ p: 3, height: '85vh', overflow: 'auto' }}>
+          <Box sx={{ p: 3, height: 'calc(100vh - 180px)', overflow: 'auto'}}>
             { generateTable() }
           </Box>
         </Grid>
 
         <Grid item xs={12} md={6}>
-          <Box sx={{ p: 3, height: '85vh', overflow: 'auto' }}>
+          <Box sx={{ p: 3, height: 'calc(100vh - 180px)', overflow: 'auto' }}>
             <CategoryContainer title={`⚖️總重量`}>
               { generateSelectedGear() }
             </CategoryContainer>
